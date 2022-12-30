@@ -70,6 +70,10 @@ bindkey "^P" znt-cd-widget
 # ctrl-u - delete befor cursor
 bindkey "^U" backward-kill-line
 
+# search in hstory ctrl + r
+bindkey -v
+bindkey '^R' history-incremental-search-backward
+
 source <(kubectl completion zsh) 
 source <(helm completion zsh)
 alias k=kubectl
