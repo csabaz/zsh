@@ -70,11 +70,9 @@ bindkey "^P" znt-cd-widget
 # ctrl-u - delete befor cursor
 bindkey "^U" backward-kill-line
 
-# search in hstory ctrl + r
-bindkey -v
 bindkey '^R' history-incremental-search-backward
 
-if command -v kubectl 
+if command -v kubectl &>/dev/null 
 then
 	source <(kubectl completion zsh) 
 	alias k=kubectl
@@ -82,7 +80,7 @@ then
 	export KUBECONFIG=~/.kube/config
 fi
 
-if command -v kubectl 
+if command -v helm &>/dev/null 
 then
 	source <(helm completion zsh)
 fi
