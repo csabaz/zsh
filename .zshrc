@@ -74,13 +74,18 @@ bindkey "^U" backward-kill-line
 bindkey -v
 bindkey '^R' history-incremental-search-backward
 
-source <(kubectl completion zsh) 
-source <(helm completion zsh)
-alias k=kubectl
-alias h=helm
-complete -F __start_kubectl k
-complete -F __start_helm h
-export KUBECONFIG=~/.kube/config
+if command -v kubectl 
+then
+	source <(kubectl completion zsh) 
+	alias k=kubectl
+	complete -F __start_kubectl k
+	export KUBECONFIG=~/.kube/config
+fi
+
+if command -v kubectl 
+then
+	source <(helm completion zsh)
+fi
 
 export EDITOR=/usr/bin/nvim
 export VISUAL=$EDITOR
