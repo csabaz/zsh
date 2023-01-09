@@ -102,3 +102,5 @@ PROMPT="%B%F{green}%n%f@%F{blue}%m%b%f[%F{yellow}%1~%f]%(!.#.$): "
 #precmd() { print "" }
 
 export PATH=$PATH:$HOME/.local/bin
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
