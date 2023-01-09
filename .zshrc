@@ -52,7 +52,7 @@ unsetopt beep notify
 ## cd ~/zsh/zhis && git pull
 ###############################################################
 # history search ctrl+r oh-my-zsh style
-## mkdir -p /zsh/fzf && git clone --depth 1 https://github.com/junegunn/fzf.git ~/zsh/fzf/ && ~/zsh/fzf/install
+## mkdir -p ~/zsh/fzf && git clone --depth 1 https://github.com/junegunn/fzf.git ~/zsh/fzf/ && ~/zsh/fzf/install
 # update fzf
 ## cd ~/zsh/fzf && git pull && ./install
 #bindkey '^R' history-incremental-search-backward ## old
