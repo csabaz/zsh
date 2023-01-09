@@ -45,8 +45,18 @@ setopt EXTENDED_HISTORY
 setopt autocd extendedglob nomatch
 unsetopt beep notify
 
+###############################################################
 # autocompletion using arrow keys (based on history)
-# mkdir -p ~/zsh/zhist && git clone https://github.com/zsh-users/zsh-history-substring-search ~/zsh/zhist
+## mkdir -p ~/zsh/zhist && git clone https://github.com/zsh-users/zsh-history-substring-search ~/zsh/zhist
+# update zhist 
+## cd ~/zsh/zhis && git pull
+###############################################################
+# history search ctrl+r oh-my-zsh style
+## mkdir -p /zsh/fzf && git clone --depth 1 https://github.com/junegunn/fzf.git ~/zsh/fzf/ && ~/zsh/fzf/install
+# update fzf
+## cd ~/zsh/fzf && git pull && ./install
+#bindkey '^R' history-incremental-search-backward ## old
+###############################################################
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/zsh/zhist/zsh-history-substring-search.zsh
@@ -70,7 +80,6 @@ bindkey "^P" znt-cd-widget
 # ctrl-u - delete befor cursor
 bindkey "^U" backward-kill-line
 
-bindkey '^R' history-incremental-search-backward
 
 if command -v kubectl &>/dev/null 
 then
