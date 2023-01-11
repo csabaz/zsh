@@ -104,3 +104,8 @@ PROMPT="%B%F{green}%n%f@%F{blue}%m%b%f[%F{yellow}%1~%f]%(!.#.$): "
 export PATH=$PATH:$HOME/.local/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+alias ls="ls --group-directories-first --color"
+alias ll="ls -l --group-directories-first --color"
+alias la="ls -la --group-directories-first --color"
+
