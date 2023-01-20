@@ -100,8 +100,11 @@ fi
 export EDITOR=/usr/bin/nvim
 export VISUAL=$EDITOR
 export SELECTED_EDITOR=$EDITOR
-
-PROMPT="%B%F{green}%n%f@%F{blue}%m%b%f[%F{yellow}%1~%f]%(!.#.$): "
+if [[ "$USER" =~ "root" ]] ; then
+	PROMPT="%B%F{red}%n%f@%F{blue}%m%b%f[%F{yellow}%1~%f]%(!.#.$): "
+else
+	PROMPT="%B%F{green}%n%f@%F{blue}%m%b%f[%F{yellow}%1~%f]%(!.#.$): "
+fi
 #precmd() { print "" }
 
 export PATH=$PATH:$HOME/.local/bin
