@@ -1,4 +1,7 @@
 autocmd FileType yaml,yaml.ansible setlocal indentkeys-=0#
+set mouse-=a
+syntax on
+coloscheme desert
 " Use a line cursor within insert mode and a block cursor everywhere else.
 "
 " Reference chart of values:
