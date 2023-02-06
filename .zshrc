@@ -97,7 +97,7 @@ then
 	source <(helm completion zsh)
 fi
 
-export EDITOR=/usr/bin/nvim
+export EDITOR=/usr/bin/vim
 export VISUAL=$EDITOR
 export SELECTED_EDITOR=$EDITOR
 if [[ "$USER" =~ "root" ]] ; then
