@@ -115,3 +115,11 @@ alias ls="ls --group-directories-first --color"
 alias ll="ls -l --group-directories-first --color"
 alias la="ls -la --group-directories-first --color"
 
+
+# >>>> Vagrant command completion (start)
+if [ -f /opt/vagrant/embedded/gems/2.3.4/gems/vagrant-2.3.4/contrib/zsh ]
+then
+	fpath=(/opt/vagrant/embedded/gems/2.3.4/gems/vagrant-2.3.4/contrib/zsh $fpath)
+	compinit
+fi
+# <<<<  Vagrant command completion (end)
