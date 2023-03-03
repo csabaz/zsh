@@ -40,6 +40,7 @@ setopt SHARE_HISTORY
 HISTFILE=$HOME/.histfile
 SAVEHIST=20000
 HISTSIZE=1000
+HISTCONTROL=ignorespace
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt EXTENDED_HISTORY
 setopt autocd extendedglob nomatch
