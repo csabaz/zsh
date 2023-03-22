@@ -44,6 +44,7 @@ HISTCONTROL=ignorespace
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt EXTENDED_HISTORY
 setopt autocd extendedglob nomatch
+setopt HIST_IGNORE_SPACE
 unsetopt beep notify
 
 ###############################################################
