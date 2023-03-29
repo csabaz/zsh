@@ -47,6 +47,9 @@ setopt autocd extendedglob nomatch
 setopt HIST_IGNORE_SPACE
 unsetopt beep notify
 
+# disable the special treatment the character '!' completely:
+unsetopt BANG_HIST
+
 ###############################################################
 # autocompletion using arrow keys (based on history)
 ## mkdir -p ~/zsh/zhist && git clone https://github.com/zsh-users/zsh-history-substring-search ~/zsh/zhist
