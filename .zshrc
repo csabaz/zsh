@@ -25,15 +25,6 @@ zstyle ':completion:*' verbose true
 zstyle :compinstall filename '$HOME/.zshrc'
 # End of lines added by compinstall
 
-# AUTOCOMPLETION
-
-autoload bashcompinit
-bashcompinit
-
-# initialize autocompletion
-autoload -Uz compinit
-compinit
-
 # history setup
 setopt APPEND_HISTORY
 setopt SHARE_HISTORY
@@ -128,3 +119,13 @@ then
 	compinit
 fi
 # <<<<  Vagrant command completion (end)
+
+## AUTOCOMPLETION
+
+autoload bashcompinit
+bashcompinit
+
+# initialize autocompletion
+autoload -Uz compinit
+compinit -i
+
