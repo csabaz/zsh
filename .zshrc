@@ -62,6 +62,14 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/zsh/zhist/zsh-history-substring-search.zsh
 
+
+# initialize autocompletion
+autoload -Uz compinit
+compinit -i
+
+bindkey "^[." insert-last-word
+bindkey "^[_" insert-last-word
+
 #bindkey '\e[A' history-search-backward
 #bindkey '\e[B' history-search-forward
 bindkey "$terminfo[kcuu1]" history-substring-search-up
@@ -125,9 +133,5 @@ then
 fi
 # <<<<  Vagrant command completion (end)
 
-## AUTOCOMPLETION
 
-# initialize autocompletion
-autoload -Uz compinit
-compinit -i
 
