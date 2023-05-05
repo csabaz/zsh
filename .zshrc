@@ -116,7 +116,7 @@ else
 fi
 #precmd() { print "" }
 
-export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.local/bin:/home/linuxbrew/.linuxbrew/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
