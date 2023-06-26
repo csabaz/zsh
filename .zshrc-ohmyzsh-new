@@ -1,5 +1,7 @@
-# The following lines were added by compinstall
+# INSTALL oh-my-zsh:
+## sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# The following lines were added by compinstall
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _list _expand _complete _ignored _match _approximate _prefix
 zstyle ':completion:*' completions 1
@@ -164,3 +166,6 @@ then
 fi
 # <<<<  Vagrant command completion (end)
 
+
+# INSTALL oh-my-zsh:
+## sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
