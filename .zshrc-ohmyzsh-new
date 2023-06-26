@@ -139,7 +139,7 @@ then
 	source <(kubectl completion zsh) 
 	alias k=kubectl
 	complete -F __start_kubectl k
-	export KUBECONFIG=~/.kube/config
+	export KUBECONFIG=~/.kube/config &> /dev/null
 fi
 
 if command -v helm &>/dev/null 
