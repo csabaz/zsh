@@ -134,7 +134,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-if command -v kubectl &>/dev/null 
+if command -v kubectl &>/dev/null &&
 then
 	source <(kubectl completion zsh) 
 	alias k=kubectl
@@ -166,6 +166,8 @@ then
 fi
 # <<<<  Vagrant command completion (end)
 
+# export shell to SST
+export OLDSHELL=$SHELL
 
 # INSTALL oh-my-zsh:
 ## sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
