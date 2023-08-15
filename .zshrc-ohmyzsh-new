@@ -159,10 +159,8 @@ alias la="ls -la --group-directories-first --color"
 alias vg="vagrant"
 alias trr="terraform"
 
-if [ -f /usr/local/bin/nala ]; then
-  alias apt="sudo nala"
-else
-  alias apt="sudo apt"
+alias nala="sudo nala"
+alias apt="sudo apt"
 fi
 
 
