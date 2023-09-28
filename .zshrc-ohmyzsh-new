@@ -165,8 +165,14 @@ alias vg="vagrant"
 alias trr="terraform"
 
 alias nala="sudo nala"
-alias apt="sudo apt"
 
+if [ "$(whoami)" != "root" ]; then
+alias apt="sudo apt"
+fi
+
+if [[ -f ~/.aliases ]]; then
+. ~/.aliases
+fi
 
 # >>>> Vagrant command completion (start)
 if [ -d /opt/vagrant/embedded/gems/2.3.4/gems/vagrant-2.3.4/contrib/zsh ]
@@ -184,3 +190,4 @@ export OLDSHELL=$SHELL
 
 autoload -Uz compinit
 fpath+=~/.zfunc
+
