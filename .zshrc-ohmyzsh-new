@@ -162,7 +162,7 @@ alias ls="ls --group-directories-first --color"
 alias ll="ls -l --group-directories-first --color"
 alias la="ls -la --group-directories-first --color"
 
-if [[ $i(whoami) != "root"  ]]
+if [[ $i(whoami) != "root"  ]]; then
 alias nala="sudo nala"
 fi
 
