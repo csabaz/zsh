@@ -161,12 +161,12 @@ export PATH=$PATH:$HOME/.local/bin:/home/linuxbrew/.linuxbrew/bin
 alias ls="ls --group-directories-first --color"
 alias ll="ls -l --group-directories-first --color"
 alias la="ls -la --group-directories-first --color"
-alias vg="vagrant"
-alias trr="terraform"
 
+if [[ $i(whoami) != "root"  ]]
 alias nala="sudo nala"
+fi
 
-if [ "$(whoami)" != "root" ]; then
+if [[ $(whoami) != "root" ]]; then
 alias apt="sudo apt"
 fi
 
@@ -189,5 +189,4 @@ export OLDSHELL=$SHELL
 ## sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc # --unattended
 
 autoload -Uz compinit
-fpath+=~/.zfunc
 
