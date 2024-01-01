@@ -14,3 +14,6 @@ colorscheme desert
 "   Ps = 6  -> steady bar (xterm).
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
+set expandtab
+set tabstop=2
+set shiftwidth=2
