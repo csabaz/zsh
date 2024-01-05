@@ -151,7 +151,7 @@ fi
 if [ $commands[oc] ]; then
   source <(oc completion zsh)
   compdef _oc oc
-if
+fi
 
 if command -v helm &>/dev/null
 then
