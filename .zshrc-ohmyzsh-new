@@ -140,33 +140,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-if command -v kubectl &>/dev/null &&
-then
-        source <(kubectl completion zsh)
-        alias k=kubectl
-        complete -F __start_kubectl k
-        export KUBECONFIG=~/.kube/config &> /dev/null
-fi
-
-if [ $commands[oc] ]; then
-  source <(oc completion zsh)
-  compdef _oc oc
-fi
-
-if command -v helm &>/dev/null
-then
-        source <(helm completion zsh)
-fi
-
-if command -v influx &>/dev/null
-then
-        source <(influx completion zsh)
-fi
-
 export EDITOR=/usr/bin/vim
 export VISUAL=$EDITOR
 export SELECTED_EDITOR=$EDITOR
-
 
 alias ls="ls --group-directories-first --color"
 alias ll="ls -l --group-directories-first --color"
@@ -174,21 +150,16 @@ alias la="ls -la --group-directories-first --color"
 alias hg="history | grep"
 alias vi="vim"
 
-if [[ $(whoami) != "root"  ]]; then
-alias nala="sudo nala"
-fi
-
-if [[ $(whoami) != "root" ]]; then
-alias apt="sudo apt"
-fi
-
-if [[ -f "${HOME}/.aliases" ]]; then
-source ${HOME}/.aliases
-fi
-
 autoload -Uz compinit
 
+if [[ -f "${HOME}/.customrc" ]]; then
+. ${HOME}/.customrc
+fi
+
+
 # INSTALL oh-my-zsh:
+# ln -s ~/zsh/.zshrc-ohmyzsh-new ~/.zshrc
+# ln -s ~/zsh/.vimrc ~/.vimhrc
 ## sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc # --unattended
 # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 # git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting

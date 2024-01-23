@@ -1,0 +1,36 @@
+if command -v kubectl &>/dev/null &&
+then
+        source <(kubectl completion zsh)
+        alias k=kubectl
+        complete -F __start_kubectl k
+        export KUBECONFIG=~/.kube/config &> /dev/null
+fi
+
+if [ $commands[oc] ]; then
+  source <(oc completion zsh)
+  compdef _oc oc
+fi
+
+if command -v helm &>/dev/null
+then
+        source <(helm completion zsh)
+fi
+
+if command -v influx &>/dev/null
+then
+        source <(influx completion zsh)
+fi
+
+if [[ $(whoami) != "root"  ]]; then
+alias nala="sudo nala"
+fi
+
+if [[ $(whoami) != "root" ]]; then
+alias apt="sudo apt"
+fi
+
+if [[ -f "${HOME}/.aliases" ]]; then
+source ${HOME}/.aliases
+fi
+
+
