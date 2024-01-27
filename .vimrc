@@ -1,3 +1,6 @@
+" ## vim indent line
+" git clone https://github.com/Yggdroot/indentLine.git ~/.vim/pack/vendor/start/indentLine
+" vim -u NONE -c "helptags  ~/.vim/pack/vendor/start/indentLine/doc" -c "q"
 autocmd FileType yaml,yaml.ansible setlocal indentkeys-=0#
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 set foldlevelstart=20
