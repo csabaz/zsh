@@ -111,6 +111,7 @@ plugins=(
   zsh-syntax-highlighting
   zsh-autosuggestions
   zsh-navigation-tools
+  docker
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -188,4 +189,6 @@ bindkey -s "^[Oo" "/"
 ## vim indent line
 # git clone https://github.com/Yggdroot/indentLine.git ~/.vim/pack/vendor/start/indentLine
 # vim -u NONE -c "helptags  ~/.vim/pack/vendor/start/indentLine/doc" -c "q"
+## docker autocomplete
+# mkdir -p ~/.oh-my-zsh/plugins/docker/ && curl -fLo ~/.oh-my-zsh/plugins/docker/_docker https://raw.githubusercontent.com/docker/cli/master/contrib/completion/zsh/_docker
 
