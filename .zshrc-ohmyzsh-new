@@ -191,7 +191,3 @@ bindkey -s "^[Oo" "/"
 ## docker autocomplete
 # mkdir -p ~/.oh-my-zsh/plugins/docker/ && curl -fLo ~/.oh-my-zsh/plugins/docker/_docker https://raw.githubusercontent.com/docker/cli/master/contrib/completion/zsh/_docker
 
-
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/home/csabaz/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
