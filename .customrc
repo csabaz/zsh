@@ -21,6 +21,11 @@ then
         source <(influx completion zsh)
 fi
 
+if command -v minikube &>/dev/null
+then
+	source <(minikube completion zsh)
+fi
+
 if [[ $(whoami) != "root"  ]]; then
 alias nala="sudo nala"
 fi
@@ -38,3 +43,7 @@ alias xf1="xfreerdp /d:WP /u:pb00369 /drive:share,/$HOME +clipboard /w:1920 /h:1
 alias xf2="xfreerdp /d:WP /u:pb00369 /drive:share,/$HOME +clipboard /w:1920 /h:1200 /v:10.100.200.102 /t:"win" /compression-level:2 /p:$(cat ~/.wppass) /dynamic-resolution /compression-level:2 /audio-mode:1 /mic:1 /multimon:force /monitors:0,1"
 alias xf3="xfreerdp /d:WP /u:pb00369 /drive:share,/$HOME +clipboard /w:1920 /h:1200 /v:10.100.200.102 /t:"win" /compression-level:2 /p:$(cat ~/.wppass) /dynamic-resolution /compression-level:2 /audio-mode:1 /mic:1 /multimon:force /monitors:0,1,2"
 fi
+
+export PATH=$PATH:/usr/local/go/bin
+LANG=en_US.UTF-8
+LANGUAGE=en_US.UTF-8
